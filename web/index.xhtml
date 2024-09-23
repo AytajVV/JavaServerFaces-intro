@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Ad, soyad daxil edin: "/>
+                <h:inputText value="#{managedBeanSinifi.adSoyad}"/>
+                
+                
+                
+                
+                <h:outputText value="Cinsiyyetiniz nedir? "/>
+                <h:selectManyCheckbox value="#{managedBeanSinifi.cinsiyyet}">
+                    <f:selectItem itemLabel="Qadin" itemValue="Qadin"/>
+                    <f:selectItem itemLabel="Kisi" itemValue="Kisi"/>
+                </h:selectManyCheckbox>
+                
+                
+                
+                
+                
+                <h:outputText value="Ehliyyetiniz varmi?"/>
+                <h:selectOneRadio value="#{managedBeanSinifi.ehliyyet}">
+                    <f:selectItem itemLabel="Beli" itemValue="Beli"/>
+                    <f:selectItem itemLabel="Xeyr" itemValue="Xeyr"/>
+                </h:selectOneRadio>
+                
+                
+                
+                <h:outputText value="Adress daxil edin: "/>
+                <h:inputTextarea value="#{managedBeanSinifi.adress}"/>
+                
+                
+                <h:outputText value="Sheher secin"/>
+                <h:selectOneMenu value="#{managedBeanSinifi.sheher}">
+                    <f:selectItem itemLabel="Baki" itemValue="Baki"/>
+                    <f:selectItem itemLabel="Gence" itemValue="Gence"/>
+                </h:selectOneMenu>
+                
+                
+                
+                
+                
+                
+                <h:outputText value="Parolu daxil edin: "/>
+                <h:inputSecret value="#{managedBeanSinifi.parol}"/>
+                
+                
+                <h:outputText value="Button ile verilenlerin gonderilmesi"/>
+                <h:commandButton value="Gonder"/>
+                
+                
+                
+                <h:outputText value="OutputLink istifadesi"/>
+                <h:outputLink value="http://google.com">gogga</h:outputLink>
+                
+                
+                
+                <h:outputText value="Daxil etdiyiniz melumatlarin dogrulugunu qebul edirsinizmi? "/>
+                <h:selectBooleanCheckbox value="#{managedBeanSinifi.qebuledildimi}"/>
+                
+                    
+            </h:panelGrid>
+            
+            
+            <h:panelGrid columns="1">
+                <h3>Daxil etdiyiniz melumatlar</h3>
+                <h:outputText value="#{managedBeanSinifi.mesaj}" style="color:red"/>
+                <h:outputText value="#{managedBeanSinifi.adSoyad}" style="color:turquoise"/>
+                <h:outputText value="#{managedBeanSinifi.cinsiyyet}"/>
+                <h:outputText value="#{managedBeanSinifi.ehliyyet}"/>
+                <h:outputText value="#{managedBeanSinifi.adress}"/>
+                <h:outputText value="#{managedBeanSinifi.sheher}"/>
+                <h:outputText value="#{managedBeanSinifi.parol}"/>
+            </h:panelGrid>
+        </h:form>
+           
+    </h:body>
+</html>
+
